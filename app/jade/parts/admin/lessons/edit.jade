@@ -1,0 +1,64 @@
+.units-row
+    .sb-ud-100
+        form.form-horizontal
+            .panel.panel-rounded
+                .panel-head.underline
+                    .panel-title
+                        h4.text-title Редактирование урока: "Первый урок"
+
+                .panel-body
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Название
+                        .sb-ud-80
+                            input(type='text', placeholder='Название', name='name', value="Первый урок")
+
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Фотография основная
+                        .photo-wr.sb-ud-20
+                            img(src="../img/globo.jpg")
+                            .photo-ctrl
+                                a.btn.btn-red.small.photo-delete
+                                    i.zmdi.zmdi-hc-2x.zmdi-close
+                        .sb-ud-100
+                            #upload-wr
+                                    .upload-text#uploadFile Выберите файл
+                                    .upload-btn-wr.btn.btn-blue.outline
+                                        span Upload
+                                        input(type="file", id='uploadButton', class='upload-input')
+
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Эксклюзив
+                        .sb-ud-80
+                            input(type="checkbox")
+                    
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Подпись
+                        .sb-ud-80
+                            input(type='text', placeholder='Название', name='name', value="Курс для менеджеров")
+
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Краткое описание
+                        .sb-ud-30
+                            textarea
+                    
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Описание
+                        .sb-ud-80
+                            textarea#ckeditor
+                    
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Ссылка на видео
+                        .sb-ud-80
+                            input(type='text', placeholder='URL видео', name='video', value="").large
+
+                .panel-ctrl.outlined
+                    .right-ctrl.btn-group
+                        a.btn.btn-light(href="admin_course.html") Назад к курсу
+                        button.btn.btn-blue(type='submit') Сохранить

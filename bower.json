@@ -1,0 +1,19 @@
+{
+  "name": "Astkol admin",
+  "version": "0.0.0",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "material-design-iconic-font": "~2.1.1",
+    "photoswipe": "~4.1.0",
+    "nouislider": "~8.0.2",
+    "wnumb": "leongersen/wnumb#~1.0.2",
+    "swiper": "~3.1.0"
+  }
+}

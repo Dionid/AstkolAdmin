@@ -1,0 +1,38 @@
+.units-row
+    .sb-ud-100
+        form.form-horizontal
+            .panel.panel-rounded
+                .panel-head.underline
+                    .panel-title
+                        h4.text-title Новый класс
+                        
+                    .panel-head-ctrl.panel-head-ctrl-right
+                        a.btn.btn-light(href="admin_characteristics_classes_list.html") Назад к классам
+                        button.btn.btn-blue(type='submin') Сохранить
+
+                .panel-body
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Название
+                        .sb-ud-80
+                            input(type='text', placeholder='Название', name='name')
+
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Категории
+                        .sb-ud-80
+                            select(multiple='multiple', name='classes')
+                                option(value='spots') Споты
+                                option(value='ceiling') Потолочные
+                                option(value='wall') Настенные
+                                option(value='chandelier') Люстры
+                                option(value='sconce') Бра
+
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Характеристики
+                        .sb-ud-80
+                            select(multiple='multiple', name='classes')
+                                option(value='spots') Производитель
+                                option(value='ceiling') Тип цоколя
+                                option(value='wall') Мощность

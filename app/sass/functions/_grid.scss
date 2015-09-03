@@ -1,0 +1,16 @@
+// Calculate grid gutter width in percentage of grid width
+@function grid-gutter-percentage($grid-w: $grid-width, $gutter-w: $grid-gutter-width) {
+  @return $gutter-w / $grid-w * 100%;
+}
+
+@function get-item-width($count-in-row) {
+  @return (100 - grid-gutter-percentage() * ($count-in-row - 1)) / $count-in-row;
+}
+
+@function get-unit-width($unit) {
+  @if ($unit == 0) {
+    @return auto;
+  } @else {
+    @return percentage($unit/100);
+  }
+}

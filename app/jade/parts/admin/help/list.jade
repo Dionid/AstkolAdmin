@@ -1,0 +1,69 @@
+.sb-ud-100
+    .panel.panel-rounded
+        .panel-head.underline
+            .panel-title
+                h4.text-title Помощь
+
+            .panel-head-ctrl.panel-head-ctrl-right
+                a.btn.btn-blue(href="admin_help_edit.html") Добавить страницу
+
+
+        .panel-body
+            table.table.stripped.text-left
+                tr
+                    th(width="1%")
+                    th(width="1%") №
+                    th Название
+                    th Дата создания
+                    th Удалить
+                
+                tr.filters
+                    td
+                    td
+                    td
+                        input
+                    td
+                        input
+                    td
+
+                tr
+                    td
+                        input(type="checkbox")
+                    td 1
+                    td
+                        a(href='admin_help_edit.html') Тренинги
+                    td 24.05.2015
+                    td
+                        a(href="#" class="btn btn-red small") У
+                
+                tr
+                    td
+                        input(type="checkbox")
+                    td 1
+                    td
+                        a(href='admin_help_edit.html') Контакты
+                    td 24.05.2015
+                    td
+                        a(href="#" class="btn btn-red small") У
+
+                tr
+                    td
+                        input(type="checkbox")
+                    td 2
+                    td
+                        a(href='admin_help_edit.html') Помощь юриста
+                    td 24.05.2015
+                    td
+                        a(href="#" class="btn btn-red small") У
+
+                tr
+                    td
+                        input(type="checkbox")
+                    td 3
+                    td
+                        a(href='admin_help_edit.html') Вопрос-ответ
+                    td 24.05.2015
+                    td
+                        a(href="#" class="btn btn-red small") У
+                        
+            include ../shared/paggination_right

@@ -1,0 +1,145 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,700italic,400italic&subset=latin,cyrillic-ext);
+@import 'material_design_fonts';
+
+body {
+    // background-color: $color-dirty-white;
+    background-color: #f8f8f8;
+    color: rgba(0, 0, 0, .87);
+    font-family: 'Roboto', 'Open-sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.618;
+}
+
+.content {
+    max-width: 1440px;
+
+    padding: 0 20px;
+
+    &.no-head {
+        padding: 40px 20px;
+    }
+
+    &.with_menu {
+        margin-top: 30px;
+        margin-bottom: 100px;
+        margin-left: 90px;
+    }
+}
+
+.title-count {
+    color: $color-orange;
+    font-weight: bold;
+
+    &.inactive {
+        color: $color-gray;
+    }
+}
+
+$list: blocks-list();
+
+#{$list} {
+    margin: 40px 0;
+
+    padding-right: $grid-gutter-width / 2;
+    padding-left: $grid-gutter-width / 2;
+}
+
+.cards-row {
+    margin: 0 0 30px;
+
+    &.with-icons {
+        .card-body,
+        .card-title {
+            margin-right: $cards-icon-width;
+        }
+    }
+}
+
+.orders-list {
+    .inline {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.form-horizontal .label-container {
+    text-align: left;
+}
+
+// UTILITIES
+
+.clearfix {
+    clear: both;
+}
+
+.push-right {
+    float: right;
+}
+
+.push-left {
+    float: left;
+}
+
+.v-top {
+    vertical-align: top;
+}
+
+.t-a-l {
+    text-align: left;
+}
+
+.t-a-c {
+    text-align: center !important;
+}
+
+.large {
+    width: 100%;
+}
+
+.n-p {
+    padding: 0 !important;
+}
+
+strong {
+    font-weight: bold;
+}
+
+// TYPOGRAPHY
+
+p:last-child {
+    margin-bottom: 20px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+// PAGES
+
+.products {
+    .table img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+}
+
+.rub{
+    font-size: 16px;
+    .large{
+        font-size: 24px;
+    }
+}
+
+.photo{
+    &-wr{
+        vertical-align: middle;
+        img{
+            width: 100%;
+            display: inline-block;
+        }
+    }
+    &-ctrl{
+        position: absolute;
+        top: 0;
+    }
+}

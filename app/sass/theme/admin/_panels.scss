@@ -1,0 +1,326 @@
+.panel {
+    border-radius: 5px;
+    background-color: $color-white;
+    box-shadow: $box-shadow-l;
+
+    &.panel-rounded {
+        border-radius: 5px;
+    }
+
+    a {
+        // color: $color-blue;
+        color: #1a509a;
+
+        &.btn-light {
+            color: $color-gray-dark;
+        }
+    }
+
+    &-head {
+        @extend %clearfix;
+
+        border-radius: 0;
+
+        &.underline:after {
+            position: relative;
+            bottom: 0;
+            left: 20px;
+            width: calc(100% - 40px);
+            height: 1px;
+            background-color: $color-gray-light;
+            content: '';
+        }
+
+        &.color{
+            &--magenta{
+                background-color: $color-magenta;
+                color: #fff;
+            }
+        }
+
+        .panel-title {
+            display: inline-block;
+            padding: 20px;
+            float: left;
+            text-transform: uppercase;
+        }
+
+        .panel-caption{
+            padding: 10px 20px;
+        }
+
+        &-ctrl {
+            padding: 17px 20px;
+
+            .panel-tabs {
+                float: left;
+
+                li {
+                    display: inline-block;
+                    float: left;
+
+                    a {
+                        display: block;
+                        position: relative;
+                        padding: 17px 20px;
+                        transition: .3s;
+                        color: $color-black;
+                    }
+
+                    &.active {
+                        border-bottom: 2px $color-blue solid;
+                        color: $color-blue;
+
+                        &:hover {
+                            color: $color-blue;
+                        }
+
+                        a {
+                            color: $color-blue;
+                        }
+                    }
+
+                    &:hover {
+                        color: $color-blue;
+                    }
+                }
+            }
+
+            &-left {
+                float: left;
+            }
+
+            &-right {
+                float: right;
+            }
+        }
+    }
+
+    .panel-body {
+        @extend %clearfix;
+
+        width: 100%;
+        padding: 20px;
+
+        &-ctrl {
+            @extend %clearfix;
+
+            margin-top: 1.1em;
+
+            .left-ctrl {
+                float: left;
+            }
+
+            .right-ctrl {
+                float: right;
+            }
+        }
+
+        .panel-link {
+            display: block;
+            margin-top: 25px;
+            padding: 3px;
+            color: $color-brown;
+            text-align: right;
+            text-transform: uppercase;
+        }
+    }
+
+    .panel-ctrl {
+        @extend %clearfix;
+
+        .right-ctrl {
+            float: right;
+        }
+
+        &.outlined {
+            border-top: 1px $color-dirty-white solid;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border-radius: 0;
+            box-shadow: none;
+
+            &:last-child {
+                border-bottom-right-radius: 5px;
+            }
+
+            &:first-child {
+                border-bottom-left-radius: 5px;
+            }
+        }
+    }
+}
+
+.big-panel {
+    .cards-row {
+        margin-bottom: 0;
+
+        &-inner {
+            border-top: 1px solid $color-gray-light;
+            border-bottom: 1px solid $color-gray-light;
+            background-color: $color-white;
+        }
+    }
+
+    &-head {
+        &-title {
+            margin: 0 15px;
+
+            .panel {
+                border-radius: 0;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+            }
+        }
+
+        .card {
+            display: inline-block;
+            width: 25%;
+            margin-top: 0;
+            border-right: 1px $color-gray-light solid;
+            border-bottom: 0;
+            border-radius: 0;
+
+            &.fifth {
+                width: 20%;
+            }
+
+            &:not(.active):hover {
+                background-color: $color-gray-light;
+            }
+
+            &:last-child {
+                border-right: 0;
+            }
+        }
+
+        .search-form {
+            margin: 0;
+
+            .small-search {
+                border-bottom: 1px $color-gray-light solid;
+            }
+
+            .small-search input {
+                border-radius: 0;
+            }
+
+            #search_extended {
+                border-radius: 0;
+            }
+        }
+    }
+
+    &-body {
+        .panel {
+            border-radius: 0;
+
+            .panel-title {
+
+                .inline {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                select {
+                    margin: 0 10px 0 20px;
+                    background: transparent;
+
+                    appearance: none;
+                }
+            }
+
+            .panel-body-ctrl {
+                padding: 17px 20px;
+
+                &-right {
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
+.separated-line {
+    width: 100%;
+    height: 1px;
+    margin-bottom: 30px;
+    background-color: $color-gray-light;
+}
+
+.form-horizontal .label {
+    margin-right: 10px;
+    font-weight: normal;
+}
+
+.form-horizontal input,
+.form-horizontal select {
+    display: inline-block;
+}
+
+.form-horizontal input.small {
+    width: 80px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+// .input {
+//     &-small{
+//         width: 100px;
+//     }
+//     &-wr {
+//         display: inline-block;
+//
+//         .input {
+//
+//             &-content {
+//                 padding: 0 0 0 2em;
+//             }
+//
+//             &-content-inline * {
+//                 display: inline-block;
+//             }
+//
+//             &-text {
+//                 color: $color-blue;
+//             }
+//         }
+//
+//         &-row {
+//             display: table;
+//             position: relative;
+//             width: 100%;
+//
+//             > * {
+//                 display: inline-block;
+//             }
+//
+//             .input-content {
+//                 width: calc( 100% - 45px );
+//             }
+//
+//             .input-icon {
+//                 min-width: 40px;
+//                 text-align: center;
+//             }
+//         }
+//
+//         label,
+//         input,
+//         textarea,
+//         select {
+//             margin: 0;
+//             width: 100%;
+//         }
+//     }
+// }
+
+.v-mid {
+    vertical-align: middle;
+}
+
+.order-info .table {
+    margin-top: 40px;
+}

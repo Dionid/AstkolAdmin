@@ -1,0 +1,15 @@
+doctype html
+html
+    include ./head
+
+    body
+        .left-menu
+            include left_menu
+
+        .top-menu
+            include top_menu
+
+        .content.with_menu
+            block content
+
+        include ./footer

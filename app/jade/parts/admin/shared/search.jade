@@ -1,0 +1,74 @@
+form.form.search-form.small
+    .input-groups.small-search
+        input(type='text', placeholder='Поиск по заказам', name='search')
+        span.btn-append
+            .btn.flat.btn-light#search_extended Расширенный поиск
+
+    .large-search
+        .units-row
+            .sb-ud-30
+                label
+                    span.label Покупатель
+                    input(type='text', placeholder='Логин', name='username')
+                    input(type='text', placeholder='Почта', name='email')
+            .sb-ud-30
+                label
+                    span.label Итог
+                    input(type='text', placeholder='От', name='price_from')
+                    span &nbsp;&mdash;
+                    input(type='text', placeholder='до', name='price_to')
+            .sb-ud-30
+                label
+                    span.label Период
+                    select(name='period')
+                        option(value='today') Сегодня
+                        option(value='yesterday') Вчера
+                        option(value='month') За посдедний месяц
+            .sb-ud-30
+                label
+                    span.label Выбрать даты
+                    input.datepicker(type='text', placeholder='От', name='date_from')
+                    span &nbsp;&mdash;
+                    input.datepicker(type='text', placeholder='до', name='date_to')
+
+            .sb-ud-20
+                span.label Статус заказа
+                label
+                    input(type='checkbox', name='order_status', value='1')
+                    span.checkbox Выполненные
+                label
+                    input(type='checkbox', name='order_status', value='2')
+                    span.checkbox Отменённые
+                label
+                    input(type='checkbox', name='order_status', value='3')
+                    span.checkbox Активные
+                label
+                    input(type='checkbox', name='order_status', value='4')
+                    span.checkbox Новые
+
+            .sb-ud-20
+                span.label Статус оплаты
+                label
+                    input(type='checkbox', name='paid_status', value='1')
+                    span.checkbox Неоплаченные
+                label
+                    input(type='checkbox', name='paid_status', value='2')
+                    span.checkbox Оплаченные
+                label
+                    input(type='checkbox', name='paid_status', value='3')
+                    span.checkbox Оплата куриеру
+            .sb-ud-20
+                span.label Статус доставки
+                label
+                    input(type='checkbox', name='delivery_status', value='1')
+                    span.checkbox Необработанные
+                label
+                    input(type='checkbox', name='delivery_status', value='2')
+                    span.checkbox Обработанные
+                label
+                    input(type='checkbox', name='delivery_status', value='3')
+                    span.checkbox Доставленные
+        .units-row
+            .sb-ud-50
+                a#search_close.btn.outline Закрыть
+                button(type="submit").btn.btn-blue Найти

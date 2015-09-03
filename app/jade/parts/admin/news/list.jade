@@ -1,0 +1,44 @@
+.sb-ud-100
+    .panel.panel-rounded
+        .panel-head.underline
+            .panel-title
+                h4.text-title Новости
+
+            .panel-head-ctrl.panel-head-ctrl-right
+                a.btn.btn-blue(href="admin_news_edit.html") Добавить новость
+
+
+        .panel-body
+            table.table.stripped.text-left
+                tr
+                    th(style="width:1%")
+                    th(style="width:1%") №
+                    th Фотография
+                    th Название
+                    th Дата создания
+                    th(style="width:1%") Удалить
+                    
+                tr.filters
+                    td
+                    td
+                    td
+                    td
+                        input
+                    td
+                        input
+                    td
+                
+                each ar,i in new Array(10)
+                    tr
+                        td
+                            input(type="checkbox")
+                        td.t-a-c= i+1
+                        td
+                            img(src="../img/globo.jpg").img.small
+                        td
+                            a(href='admin_news_edit.html') "Как увеличить чистую прибыль компании"
+                        td 24.08.2015
+                        td
+                            a(href="#" class="btn btn-red small") У
+                            
+            include ../shared/paggination_right

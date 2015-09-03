@@ -1,0 +1,54 @@
+@mixin docs-blocks() {
+  $block-list: blocks-list();
+  
+  #{$block-list} {
+    margin: 20px 0;
+
+    > li {
+      margin-top: 5px;
+      padding: 10px 0;
+      border: 1px solid $blocks-border-color;
+      background-color: $blocks-bg-color;
+      color: $light-text-color;
+      text-align: center;
+
+      &.blocks-item-big {
+        padding: 40px 0;
+      }
+    }
+  }
+}
+
+$light-text-color: #fff;
+$blocks-bg-color: #fa6900;
+$blocks-border-color: #a7dbd8;
+$grid-bg-color: #0064c2;
+$grid-border-color: #000f21;
+
+.documentation {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.documentation {
+  @include docs-blocks();
+}
+
+.documentation .units-row > div {
+  margin-top: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid $grid-border-color;
+  background-color: $grid-bg-color;
+  color: $light-text-color;
+  text-align: center;
+}
+
+.documentation.buttons .units-row > div {
+  background: transparent;
+}
+
+.documentation .form,
+.documentation .form-inline {
+  margin: 50px 0;
+}

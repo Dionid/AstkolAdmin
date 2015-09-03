@@ -1,0 +1,25 @@
+.units-row
+    .sb-ud-100
+        form.form-horizontal
+            .panel.panel-rounded
+                .panel-head.underline
+                    .panel-title
+                        h4.text-title Редактирование совета: "Как не ..."
+
+                .panel-body
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Название
+                        .sb-ud-80
+                            input(type='text', placeholder='Название', name='name', value="Как не ...")
+
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Текст совета
+                        .sb-ud-80
+                            textarea.ckedit
+
+                .panel-ctrl.outlined
+                    .right-ctrl.btn-group
+                        a.btn.btn-light(href="admin_advices.html") Назад к советам
+                        button.btn.btn-blue(type='submit') Сохранить

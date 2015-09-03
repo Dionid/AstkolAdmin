@@ -1,0 +1,109 @@
+@mixin call-units-breakpoints() {
+  @include check-breakpoints-structure();
+
+  $list: unit-list();
+  
+  .units-row {
+    @extend %clear-inline-block-parent;
+    margin: 0;
+  }
+
+  #{$list} {
+    @extend %clear-inline-block-item;
+    // Prevent columns from collapsing when empty
+    min-height: 1px;
+    margin: 0 0 $base-line;
+    // Inner gutter via padding
+    padding-right: $grid-gutter-width / 2;
+    padding-left: $grid-gutter-width / 2;
+    vertical-align: top;
+  }
+
+  @each $bp-name, $bp in $breakpoints {
+    @if (map-get($bp, 'from') > 0) {
+      @include respond-to($bp-name) {
+        @include make-units(map-get($bp, 'short'));
+      }
+    } @else {
+      @include make-units(map-get($bp, 'short'));
+    }
+  }
+}
+
+@mixin make-units($preffix: '') {  
+  @include loop-units($preffix, width);
+  @include loop-units($preffix, pull);
+  @include loop-units($preffix, push);
+  @include loop-units($preffix, offset);
+}
+
+@mixin loop-units($preffix, $type) {
+  @each $unit in $units {
+    @include calc-unit($unit, $type, $preffix);
+  }
+
+  @each $unit, $name in $units-names {
+    @include calc-unit($unit, $type, $preffix, $name);
+  }
+}
+
+// Preffix should be like 'm', 'd' or big preffix - '-mobile', '-desktop'
+@mixin calc-unit($unit, $type, $preffix: '', $name: $unit) {
+  @if ($type == width) {
+    .#{$fw-preffix}-u#{$preffix}-#{$name} {
+      @if ($unit > 0) {
+        width: get-unit-width($unit);
+      } @else {
+        display: none;
+      }
+    }
+  }
+
+  @if ($type == push) {
+    .#{$fw-preffix}-u#{$preffix}-push-#{$name} {
+      left: get-unit-width($unit);
+    }
+  }
+
+  @if ($type == pull) {
+    .#{$fw-preffix}-u#{$preffix}-pull-#{$name} {
+      right: get-unit-width($unit);
+    }
+  }
+
+  @if ($type == offset) {
+    .#{$fw-preffix}-u#{$preffix}-offset-#{$name} {
+      margin-left: get-unit-width($unit);
+    }
+  }
+}
+
+// unit-list() or unit-list(width)
+// unit-list(pull), unit-list(push), unit-list(offset)
+@function unit-list($type: '') {
+  $list: ();
+
+  @if $type == width {
+    $type: '';
+  }
+
+  @each $bp-name, $bp in $breakpoints {
+    $preffix: map-get($bp, 'short');
+    @each $unit in $units {
+      $list: append($list, unquote(".#{$fw-preffix}-u#{$preffix}-#{$type}#{$unit}"), comma);
+    }
+    @each $unit, $name in $units-names {
+      $list: append($list, unquote(".#{$fw-preffix}-u#{$preffix}-#{$type}#{$name}"), comma);
+    }
+  }
+
+  @return $list;
+}
+
+@mixin check-breakpoints-structure() {
+  @each $bp-name, $bp in $breakpoints {
+    @if not map-has-key($bp, 'from') or not map-has-key($bp, 'short') {
+      @error 'Unfortunately, $breakpoints array has wrong structure. Please, read documentation for fix this.';
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.units-row
+    .sb-ud-100
+        form.form-horizontal
+            .panel.panel-rounded
+                .panel-head.underline
+                    .panel-title
+                        h4.text-title Редактирование страницы: "Помощь юриста"
+
+                .panel-body
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Название
+                        .sb-ud-80
+                            input(type='text', placeholder='Название', name='name', value="Первый урок")
+                    
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Описание
+                        .sb-ud-80
+                            textarea#ckeditor
+    
+
+                .panel-ctrl.outlined
+                    .right-ctrl.btn-group
+                        a.btn.btn-light(href="admin_course.html") Назад к курсу
+                        button.btn.btn-blue(type='submit') Сохранить

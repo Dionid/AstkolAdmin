@@ -1,0 +1,59 @@
+.btn {
+    transition: .3s;
+    padding: 0.51em 1.5em;
+    // box-shadow: none;
+
+    &:hover {
+        // box-shadow: none;
+    }
+
+    &-orange {
+        background-color: $color-orange;
+        color: $color-white;
+
+        &:hover {
+            background-color: lighten($color-orange, 5%);
+            color: $color-white;
+        }
+    }
+
+    &.circle{
+        margin: 0 5px;
+    }
+}
+
+.btn-flat {
+    border: 0;
+    background-color: $color-white;
+    color: $color-black;
+
+    &:hover {
+        background-color: $color-dirty-white;
+        color: $color-blue;
+    }
+}
+
+.btn-white {
+    transition: .3s;
+    border: 0;
+    background-color: $color-white;
+    color: $color-black;
+    font-size: 18px !important;
+    // box-shadow: none;
+
+    &:hover {
+        background-color: $color-white;
+        color: $color-black;
+        // box-shadow: none;
+    }
+
+    &-active {
+        &:hover {
+
+            &-blue {
+                background-color: $color-blue;
+                color: $color-white;
+            }
+        }
+    }
+}

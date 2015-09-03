@@ -1,0 +1,59 @@
+.sb-ud-100
+    .panel.panel-rounded
+        .panel-head.underline
+            .panel-title
+                h4.text-title Советы
+
+            .panel-head-ctrl.panel-head-ctrl-right
+                a.btn.btn-blue(href="admin_characteristic_new.html") Добавить совет
+
+
+        .panel-body
+            table.table.stripped.text-left
+                tr
+                    th(width="1%")
+                    th(width="1%") №
+                    th Название
+                    th Дата создания
+                    th Удалить
+                
+                tr.filters
+                    td
+                    td
+                    td
+                        input
+                    td
+                        input
+                    td
+
+                tr
+                    td
+                        input(type="checkbox")
+                    td 1
+                    td
+                        a(href='admin_advice.html') "Как не ..."
+                    td 24.05.2015
+                    td
+                        a(href="#" class="btn btn-red small") У
+
+                tr
+                    td
+                        input(type="checkbox")
+                    td 2
+                    td
+                        a(href='admin_advice.html') "Как не ..."
+                    td 24.05.2015
+                    td
+                        a(href="#" class="btn btn-red small") У
+
+                tr
+                    td
+                        input(type="checkbox")
+                    td 3
+                    td
+                        a(href='admin_advice.html') "Как не ..."
+                    td 24.05.2015
+                    td
+                        a(href="#" class="btn btn-red small") У
+                        
+            include ../shared/paggination_right

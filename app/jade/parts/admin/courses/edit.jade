@@ -1,0 +1,104 @@
+.units-row
+    .sb-ud-100
+        form.form-horizontal
+            .panel.panel-rounded
+                .panel-head.underline
+                    .panel-title
+                        h4.text-title Редактирование курса: "Слово профессионала"
+
+                .panel-body
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Название
+                        .sb-ud-80
+                            input(type='text', placeholder='Название', name='name', value="Слово профессионала")
+
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Фотография основная
+                        .photo-wr.sb-ud-20
+                            img(src="../img/globo.jpg")
+                            .photo-ctrl
+                                a.btn.btn-red.small.photo-delete
+                                    i.zmdi.zmdi-hc-2x.zmdi-close
+                        .sb-ud-100
+                            #upload-wr
+                                    .upload-text#uploadFile Выберите файл
+                                    .upload-btn-wr.btn.btn-blue.outline
+                                        span Upload
+                                        input(type="file", id='uploadButton', class='upload-input')
+
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Подпись
+                        .sb-ud-80
+                            input(type='text', placeholder='Название', name='name', value="Курс для менеджеров")
+
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Краткое описание
+                        .sb-ud-30
+                            textarea
+                    
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Описание
+                        .sb-ud-80
+                            textarea#ckeditor
+                    
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Ссылка на видео-трейлер
+                        .sb-ud-80
+                            input(type='text', placeholder='Название', name='name', value="").large
+
+                .panel-ctrl.outlined
+                    .right-ctrl.btn-group
+                        a.btn.btn-light(href="admin_courses.html") Назад к курсам
+                        button.btn.btn-blue(type='submit') Сохранить
+
+    .sb-ud-100
+        .panel.panel-rounded
+            .panel-head.underline
+                .panel-title
+                    h4.text-title Уроки курса
+
+                .panel-head-ctrl.panel-head-ctrl-right
+                    a.btn.btn-blue(href="admin_lesson.html") Добавить урок
+
+
+            .panel-body
+                table.table.stripped.text-left
+                    tr
+                        th.t-a-c №
+                        th Название
+                        th Дата создания
+                        th Эксклюзивный
+                        th Удалить
+
+                    tr
+                        td.t-a-c 1
+                        td
+                            a(href='admin_lesson.html') Первый урок
+                        td 24.05.2015
+                        td НЕТ
+                        td
+                            a(href="#" class="btn btn-red small") У
+
+                    tr
+                        td.t-a-c 2
+                        td
+                            a(href='admin_lesson.html') Первый урок
+                        td 24.05.2015
+                        td ДА
+                        td
+                            a(href="#" class="btn btn-red small") У
+
+                    tr
+                        td.t-a-c 3
+                        td
+                            a(href='admin_lesson.html') Первый урок
+                        td 24.05.2015
+                        td ДА
+                        td
+                            a(href="#" class="btn btn-red small") У

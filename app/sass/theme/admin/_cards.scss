@@ -1,0 +1,100 @@
+.card {
+    margin-top: 1em;
+    border-radius: 3px;
+    background-color: $color-white;
+    word-spacing: 0;
+    box-shadow: $box-shadow-l;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &-statistic {
+        color: $color-white;
+
+        &-white {
+            color: $color-black;
+            font-size: .9em;
+        }
+
+        &-red {
+            background-color: $color-red;
+        }
+
+        &-purple {
+            background-color: $color-purple;
+        }
+
+        &-blue {
+            background-color: $color-blue;
+        }
+
+        &-orange {
+            background-color: $color-orange;
+        }
+
+        &-yellow {
+            background-color: $color-yellow;
+        }
+
+        &.active {
+            background: $color-brown;
+            color: $color-white;
+            text-transform: uppercase;
+        }
+
+        .card-body {
+            padding: 0 20px 20px;
+        }
+    }
+
+    &-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: $cards-icon-width;
+        padding: 20px;
+        text-align: center;
+
+        img {
+            max-width: $cards-icon-width - 2*20px;
+            max-height: $cards-icon-height - 2*20px;
+        }
+    }
+
+    .card-title {
+        padding: 20px;
+    }
+
+    &-inline {
+        display: inline-block;
+    }
+
+    &-state{
+        display: inline-block;
+        label{
+            color: #fff;
+            margin: 0;
+            font-weight: bold;
+            select{
+                color: #333;
+                font-weight: normal;
+            }
+        }
+        &:nth-child(2){
+            margin-left: 1em;
+        }
+        &-pending{
+            background-color: #2575ed;
+        }
+        &-done{
+            background-color: #1CD59D;
+        }
+        &-cancelled{
+            background-color: #C0C0C0;
+        }
+        &-new{
+            background-color: #fec006;
+        }
+    }
+}

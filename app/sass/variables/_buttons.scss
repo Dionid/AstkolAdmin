@@ -1,0 +1,56 @@
+$btn-padding-vertical: .31em;
+$btn-padding-horizontal: 1.5em;
+$btn-radius: .2em;
+
+$btn-bg-white: #fff;
+$btn-bg-black: #000;
+$btn-bg-default: #b2b2b2;
+// $btn-bg-default: #eee;
+$btn-color-default: #f6f6f6;
+
+$btn-font-normal: 1em;
+$btn-font-large: 1.2em;
+$btn-font-small: .85em;
+$btn-font-smaller: .75em;
+
+$btn-rounded-radius: 1.1em;
+$btn-circle-size: 3em;
+
+$btn-transition: all .2s;
+
+// $btn-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+// $btn-shadow-hover: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+
+$btn-shadow: none;
+$btn-shadow-hover: none;
+
+$btn-colors: (
+  'transparent' : (
+    'text-color': $btn-bg-black,
+    'background': transparent
+  ),
+  'light' : (
+    'text-color': $btn-bg-black,
+    'background': $btn-bg-white
+  ),
+  'red': (
+    'text-color': $btn-bg-white,
+    'background': #f34235
+  ),
+  'blue': (
+    'text-color': $btn-bg-white,
+    'background': #2095f2
+  ),
+  'slate-blue': (
+    'text-color': $btn-bg-white,
+    'background': #5677fc
+  ),
+  'yellow': (
+    'text-color': $btn-bg-white,
+    'background': #fc6
+  ),
+  'green': (
+    'text-color': $btn-bg-white,
+    'background': #0c9
+  ),
+);

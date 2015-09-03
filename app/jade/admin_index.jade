@@ -1,0 +1,17 @@
+extends ./layouts/admin/layout
+
+block title
+    title Index page
+
+block content
+    .units-row
+        include ./parts/admin/index/news
+        include ./parts/admin/index/help
+        
+    .units-row
+        include ./parts/admin/index/brands_enc
+        include ./parts/admin/index/brands_prod
+        
+    .units-row
+        include ./parts/admin/index/advices
+        include ./parts/admin/index/courses

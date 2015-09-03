@@ -1,0 +1,62 @@
+.units-row
+    .sb-ud-100
+        form.form-horizontal
+            .panel.panel-rounded
+                .panel-head.underline
+                    .panel-title
+                        h4.text-title Редактирование бренда: Lelo
+
+                .panel-body
+                    
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Название
+                        .sb-ud-80
+                            input(type='text', placeholder='Название', name='name', value="Lelo")
+                    
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Фотография основная
+                        .photo-wr.sb-ud-20
+                            img(src="../img/globo.jpg")
+                            .photo-ctrl
+                                a.btn.btn-red.small.photo-delete
+                                    i.zmdi.zmdi-hc-2x.zmdi-close
+                        .sb-ud-100
+                            #upload-wr
+                                    .upload-text#uploadFile Выберите файл
+                                    .upload-btn-wr.btn.btn-blue.outline
+                                        span Upload
+                                        input(type="file", id='uploadButton', class='upload-input')
+                                            
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Фотография Белая
+                        .photo-wr.sb-ud-20
+                            img(src="../img/globo.jpg")
+                            .photo-ctrl
+                                a.btn.btn-red.small.photo-delete
+                                    i.zmdi.zmdi-hc-2x.zmdi-close
+                        .sb-ud-100
+                            #upload-wr
+                                    .upload-text#uploadFile Выберите файл
+                                    .upload-btn-wr.btn.btn-blue.outline
+                                        span Upload
+                                        input(type="file", id='uploadButton', class='upload-input')
+
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Краткое описание ( на фракталл 200-250 симв.)
+                        .sb-ud-80
+                            textarea Описание
+                
+                    .units-row
+                        .sb-ud-20.label-container
+                            span.label Полное описание
+                        .sb-ud-80
+                            textarea#ckeditor Люстры, бра и т.д.
+                
+                .panel-ctrl.outlined
+                    .right-ctrl.btn-group
+                        a.btn.btn-light(href="admin_brands_enc_list.html") Назад к энкциклопедии брендов
+                        button.btn.btn-blue(type='submin') Сохранить

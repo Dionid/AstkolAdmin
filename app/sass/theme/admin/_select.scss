@@ -1,0 +1,75 @@
+.multiple-select {
+    position: absolute;
+    width: 100%;
+    max-height: 0;
+    padding: 0 5px;
+
+    transition: all $transition-time ease;
+    border: 0 solid $color-gray-light;
+    background: $color-white;
+    overflow: hidden;
+    z-index: 99;
+
+    .child{
+        margin-left: 20px;
+    }
+
+    &-container {
+        position: relative;
+        width: 300px;
+
+        &.active {
+            .multiple-select {
+                max-height: 300px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border-top: 0;
+                border-width: 1px;
+            }
+
+            .multiple-select-button:after {
+                transform: rotateX(180deg);
+            }
+        }
+    }
+
+    .disabled {
+        color: $color-gray;
+    }
+
+    [type='checkbox'] {
+        margin-right: 5px;
+    }
+
+    label {
+        margin-bottom: 0;
+    }
+
+    &-button {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 28px;
+        padding-right: 10px;
+        border: 1px solid $color-gray-light;
+        background-color: $color-white;
+        text-align: left;
+        cursor: pointer;
+
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 5px;
+            transition: all $transition-time ease;
+            color: $color-gray;
+            font-size: .5em;
+            line-height: 28px;
+            content: '▼';
+        }
+    }
+}
+
+select{
+    height: 30px;
+}

@@ -1,0 +1,40 @@
+.sb-ud-100
+    .panel.panel-rounded
+        .panel-head.underline
+            .panel-title
+                h4.text-title Бренды
+
+            .panel-head-ctrl.panel-head-ctrl-right
+                a.btn.btn-blue(href="admin_brand.html") Добавить бренд
+
+
+        .panel-body
+            table.table.stripped.text-left
+                tr
+                    th
+                    th.t-a-c №
+                    th Фотография
+                    th.big-cell Название
+                    th Удалить
+                    
+                tr.filters
+                    td
+                    td
+                    td
+                    td
+                        input
+                    td
+                
+                each ar,i in new Array(10)
+                    tr
+                        td
+                            input(type="checkbox")
+                        td.t-a-c= i+1
+                        td
+                            img(src="../img/globo.jpg").img.small
+                        td
+                            a(href='admin_brand.html') Бренд
+                        td
+                            a(href="#" class="btn btn-red small") У
+                            
+            include ../shared/paggination_right

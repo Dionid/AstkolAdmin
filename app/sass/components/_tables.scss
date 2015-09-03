@@ -1,0 +1,32 @@
+$row-background-default: #fff;
+$row-background-even: #f8f8f8;
+
+.table {
+  width: 100%;
+
+  th {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  td,
+  th {
+    padding: 10px;
+    line-height: 1.1;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  &.text-left td,
+  &.text-left th {
+    text-align: left;
+  }
+
+  &.stripped {
+    background: $row-background-default;
+
+    tr:nth-child(even) td {
+      background: $row-background-even;
+    }
+  }
+}

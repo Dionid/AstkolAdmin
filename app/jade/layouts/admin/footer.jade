@@ -1,0 +1,34 @@
+script(src='../js/admin_helpers.js')
+
+script(src='../js/admin_add_variant.js')    
+script(src='../js/admin_search.js')
+script(src='../js/admin_input_type.js')
+script(src='../js/admin_card_state.js')
+script(src='../js/admin_add_product_modal.js')
+script(src='../js/multiple_select.js')
+script(src='../js/upload_button.js')
+    
+script(src='../js/cke.js')
+
+script(src='../vendor/pikaday.js')
+    
+script(type='text/javascript').
+    var el =  document.getElementsByClassName('datepicker')
+    if(el){
+        for(i=0;i<el.length;i++){
+            var picker = new Pikaday({
+                field: el[i]
+            })
+        }
+    }
+    
+    CKEDITOR.replace( 'ckeditor', CKEDITORCONFIG)
+    
+    //- $.ready(function(){
+    //-     CKEDITORCONFIG.on = {
+    //-         'instanceReady': function (e) {
+    //-             e.editor.execCommand('maximize')
+    //-         }
+    //-     };
+    //-     CKEDITOR.replace('example', CKEDITORCONFIG);
+    //- });

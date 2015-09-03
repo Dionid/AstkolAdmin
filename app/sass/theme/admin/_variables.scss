@@ -1,0 +1,36 @@
+$box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+$box-shadow-l: 0 1px 5px rgba(0, 0, 0, .05);
+
+$color-white: #fff;
+$color-dirty-white: #f0f0f0;
+$color-gray-light: #e0e0e0;
+
+$color-yellow: #FFD800;
+$color-orange: #fec006;
+$color-brown: #42322a;
+$color-purple: #9b26af;
+$color-magenta: #A74691;
+
+$color-gray: #999;
+
+$color-gray-dark: #333;
+
+$color-black: #000;
+
+$cards-icon-width: 120px;
+$cards-icon-height: 150px;
+
+$transition-time: .3s;
+
+// размеры шрифтов
+$font-size-base: 14px;
+// 10px
+$font-size-xs: $font-size-base - 4;
+// 12px
+$font-size-sm: $font-size-base - 2;
+// 16px
+$font-size-md: $font-size-base + 2;
+// 18px
+$font-size-lg: $font-size-base + 4;
+// 20px
+$font-size-xlg: $font-size-base + 6;

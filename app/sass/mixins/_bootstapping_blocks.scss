@@ -1,0 +1,84 @@
+@mixin call-blocks-breakpoints() {
+  $list: blocks-list();
+
+  #{$list} {
+    @extend %clear-inline-block-parent;
+    margin: 0;
+    padding: 0;
+    
+    list-style-type: none;
+
+    >li {
+      @extend %clear-inline-block-item;
+      margin: 0;
+    }
+  }
+
+  @each $bp-name, $bp in $breakpoints {
+    @if (map-get($bp, 'from') > 0) {
+      @include respond-to($bp-name) {
+        @include make-blocks(map-get($bp, 'short'));
+      }
+    } @else {
+      @include make-blocks(map-get($bp, 'short'));
+    }
+  }
+}
+
+@mixin make-blocks($preffix: '') {
+  @for $i from 2 through $blocks-count {
+    .#{$fw-preffix}-b#{$preffix}-#{$i} >li {
+      @include block-item($i);
+    }
+  }
+}
+
+@mixin block-item($count-in-row) {
+  width: get-block-width($count-in-row);
+
+  $first-child: unquote("#{$count-in-row}n+1");
+  $last-child: unquote("#{$count-in-row}n");
+
+  &:nth-child(#{$last-child}) {
+    margin-right: 0;
+  }
+
+  &:not(:nth-child(#{$last-child})) {
+    margin-right: $blosk-guttet-width/2;
+  }
+
+  &:nth-child(#{$first-child}) {
+    margin-left: 0;
+  }
+
+  &:not(:nth-child(#{$first-child})) {
+    margin-left: $blosk-guttet-width/2;
+  }
+}
+
+@function get-block-width($count-in-row) {
+  @return (100 - get-blocks-gutter-width() * ($count-in-row - 1)) / $count-in-row;
+}
+
+// In percentage
+@function get-blocks-gutter-width() {
+  @if unit($blosk-guttet-width) == '%' {
+    @return $blosk-guttet-width;
+  } @else {
+    @return percentage($blosk-guttet-width/$grid-width);
+  }
+}
+
+// sb-b-2, sb-bm-3 etc.
+@function blocks-list() {
+  $list: ();
+
+  @each $bp-name, $bp in $breakpoints {
+    $preffix: map-get($bp, 'short');
+    @for $i from 2 through $blocks-count {
+      $list: append($list, unquote(".#{$fw-preffix}-b#{$preffix}-#{$i}"), comma);
+    }
+  }
+
+  @return $list;
+}

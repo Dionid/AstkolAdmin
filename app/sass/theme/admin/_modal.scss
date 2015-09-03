@@ -1,0 +1,56 @@
+.modal-window-wr {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+
+    transition: .5s;
+    background-color: rgba(0, 0, 0, .5);
+    opacity: 1;
+    visibility: visible;
+    z-index: 9999;
+
+    &::before{
+        content: '\f136';
+        position: absolute;
+        font: normal normal normal 40px/1 'Material-Design-Iconic-Font';
+        width: 40px;
+        height: 40px;
+        top: 10px;
+        right: 10px;
+        color: #fff;
+        // background-color: #fff;
+    }
+
+    &.deactivated {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .modal-window {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        max-height: 90%;
+        transform: translateX(-50%) translateY(-50%);
+        background: $color-white;
+        word-spacing: normal;
+        overflow: auto;
+
+        .panel {
+            height: 100%;
+        }
+
+        .search-form,
+        .modal-body {
+            word-spacing: normal;
+        }
+
+        .btn {
+            border-radius: 5px;
+        }
+    }
+}

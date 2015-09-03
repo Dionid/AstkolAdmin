@@ -1,0 +1,14 @@
+extends ./layouts/admin/layout
+
+block title
+    title News
+    
+block content
+    .units-row
+        include ./parts/admin/shared/breadcrumbs
+        
+    .units-row
+        include ./parts/admin/shared/search
+    
+    .units-row
+        include ./parts/admin/news/edit
